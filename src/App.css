@@ -1,0 +1,49 @@
+body{
+
+  color: #fff;
+ 
+}
+.result {
+  height: 60px;
+  background-color:greenyellow;
+  width: 100%;
+}
+
+h1 {
+  font-size: 40px;
+  border: 2px solid black;
+  background-color: greenyellow;
+  padding: 15px;
+
+}
+
+.App {
+  max-width: 400px;
+  margin: auto;
+  background-color: black;
+  border:10px solid black;
+  border-radius: 10px;
+}
+
+
+
+button {
+  width: 20%;
+  background-color: burlywood;
+  height: 50px;
+  font-size: 40px;
+  border-radius: 20px;
+  color: #fff;
+
+}
+
+
+.special{
+  background-color: orangered;
+  border-radius: 20px
+}
+.operations{
+  background-color: orange;
+  border-radius: 20px;
+}
+
