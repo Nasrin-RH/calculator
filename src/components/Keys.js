@@ -8,7 +8,7 @@ class Keys extends Component {
             <div className='buttons'>
             <div>
             <button name='^2'className="operations" onClick={e=>this.props.onClick(e.target.name)}>^2</button>
-            <button name=' %'className="operations" onClick={e=>this.props.onClick(e.target.name)}> %</button> 
+            <button name='-1'className="operations" onClick={e=>this.props.onClick(e.target.name)}> 1/x</button> 
             <button name='('className="operations" onClick={e=>this.props.onClick(e.target.name)}>(</button> 
             <button name=')'className="operations" onClick={e=>this.props.onClick(e.target.name)}>)</button>
             <button name='/'className="operations" onClick={e=>this.props.onClick(e.target.name)}>/</button>

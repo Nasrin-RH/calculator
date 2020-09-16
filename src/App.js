@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Display from './components/Display';
 import Keys from './components/Keys';
-import * as Math from 'Mathjs';
+import * as Math from 'mathjs';
 
 class App extends Component {
   constructor() {
@@ -34,8 +34,8 @@ class App extends Component {
       case '^2':
         this.square();
         break;
-      case '%':
-        this.percnt();
+      case '-1':
+        this.inv();
         break;
     
       default:
@@ -57,7 +57,7 @@ class App extends Component {
 
     try {
         this.setState({
-            result: (eval(checkResult) || " " ) + ""
+            result: (eval(checkResult).toPrecision(2) || "0" ) + ""
         })
     } catch (e) {
         this.setState({
@@ -81,29 +81,32 @@ back = () => {
 
 square=()=>{
   this.setState({
-    result:this.state.result*this.state.result
+    result:Math.pow(this.state.result,2).toPrecision(3)
   })
 }
 sin=()=>{
   this.setState({
-    result : Math.sin(this.state.result)
+    result : Math.sin(this.state.result).toPrecision(2)
   })
 }
 cos=()=>{
   this.setState({
-    result : Math.cos(this.state.result)
+    result : Math.cos(this.state.result).toPrecision(2)
   })
 }
 tan=()=>{
 this.setState({
-result : Math.tan(this.state.result)
+result : Math.tan(this.state.result).toPrecision(2)
 })
 }
-
-percnt=()=>{
-   let per=this.state.result*0.01;
+// percent=()=>{
+//   this.setState({
+//     result : this.state.result*0.01
+//   })
+// }
+inv=()=>{
   this.setState({
-    result : per
+    result : Math.pow(this.state.result,-1)
   })
 }
   render() {
